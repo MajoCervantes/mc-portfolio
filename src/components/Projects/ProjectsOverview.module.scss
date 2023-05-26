@@ -1,0 +1,161 @@
+@import '../../scss/index.scss';
+
+.mainMessage {
+	position: relative;
+	width: 45%;
+	display: flex;
+
+	> .welcomeMessage {
+		> div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			> h1 {
+				font-size: 70px;
+				margin-bottom: 30px;
+			}
+
+			> span {
+				display: inline-block;
+				position: relative;
+				padding-left: 40px;
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					width: 3px;
+					background: linear-gradient(0deg, #fca2c0 0%, #5ddfea 100%);
+				}
+
+				> p {
+					font-size: 16px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+.spacer {
+	max-width: 130px;
+	width: 90px;
+}
+
+.mainProjects {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+  flex-basis: 30.9017%;
+
+	> h2 {
+		margin-bottom: 30px;
+		font-size: 30px;
+	}
+
+	> {
+		.projectWrapper {
+			font-size: 16px;
+			position: relative;
+
+			&::before {
+				content: ' ';
+				width: 90px;
+				height: 3px;
+				background: linear-gradient(135deg, #fca2c0 0%, #5ddfea 100%);
+				opacity: 1;
+				transition: all 0.3s ease-in-out;
+				position: absolute;
+				top: -2px;
+				left: 0;
+			}
+
+			&::after {
+				content: ' ';
+				width: 3px;
+				height: 90px;
+				background: linear-gradient(135deg, #fca2c0 0%, #5ddfea 100%);
+				opacity: 1;
+				transition: all 0.3s ease-in-out;
+				position: absolute;
+				top: 0;
+				left: -2px;
+			}
+
+			&:hover::before {
+				background: linear-gradient(135deg, #5ddfea 0%, #fca2c0 100%);
+			}
+
+			&:hover::after {
+				background: linear-gradient(135deg, #5ddfea 0%, #fca2c0 100%);
+			}
+
+			> div {
+				z-index: 1;
+				width: 100%;
+				border-top-left-radius: 7px;
+				display: flex;
+				flex-direction: column;
+				padding: 30px 30px 0;
+				position: relative;
+
+				> a {
+					margin-bottom: 15px;
+					padding-bottom: 5px;
+					line-height: 1.5;
+					text-decoration: none;
+					transition: transform 0.3s;
+					overflow: hidden; /* Agregamos esta línea para evitar que se corte el texto */
+
+					&:hover {
+						transform: scaleX(1.1);
+					}
+
+					> span {
+						transition: all 0.3s ease-in-out;
+						display: inline-block;
+						position: relative;
+
+						&::before {
+              content: "";
+              width: 100%;
+              height: 1px;
+              background: linear-gradient(135deg, #fca2c0 0%, #5ddfea 100%);
+              opacity: 1;
+              transition: all 0.3s ease-in-out;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+
+             
+						}
+            &:hover::before {
+              opacity: 0;
+            }
+
+            
+						&::after {
+              content: "";
+              width: 100%;
+              height: 1px;
+              background: linear-gradient(135deg, #5ddfea 0%, #fca2c0 100%);
+              opacity: 0;
+              transition: all 0.3s ease-in-out;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+
+             
+						}
+            &:hover::after {
+              opacity: 1;
+            }
+					}
+				}
+			}
+		}
+	}
+}
