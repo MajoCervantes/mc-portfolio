@@ -1,0 +1,98 @@
+@import '../../../../scss/index.scss';
+
+.projectInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: transparent transparent;
+
+	> h1 {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+
+	> span {
+		display: inline-block;
+		position: relative;
+		padding-left: 40px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 3px;
+			background: linear-gradient(0deg, #fca2c0 0%, #5ddfea 100%);
+		}
+
+		> p {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.buttonsContainer {
+	> button {
+		margin-right: 25px;
+		background-color: $background;
+		border: none;
+
+		> a {
+			text-align: center;
+			color: $secondary;
+			padding: 8px 0;
+			font-size: 16px;
+			font-weight: 700;
+			text-decoration-line: none;
+			margin-bottom: 10p;
+
+			&::after {
+				content: ' ';
+				display: block;
+				height: 2px;
+				width: 100%;
+				background: linear-gradient(270deg, #fca2c0 0%, #5ddfea 100%);
+				transition: all 0.3s ease-in-out;
+				margin-top: 5px;
+			}
+
+			&:hover::after {
+				background: linear-gradient(270deg, #5ddfea 0%, #fca2c0 100%);
+			}
+
+			&:hover {
+				color: #f4f4f4;
+			}
+		}
+	}
+}
+
+.slideIn {
+	animation: slideIn 0.5s ease-in-out;
+
+	@keyframes slideIn {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+}
+
+.slideOut {
+	animation: slideOut 0.5s ease-in-out;
+
+	@keyframes slideOut {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+}

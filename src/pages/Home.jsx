@@ -1,4 +1,4 @@
-import ProjectsOverview from '../components/Projects/ProjectsOverview';
+import InnerInfo from '../components/InnerInfo/InnerInfo';
 import BasicLayout from '../components/BasicLayout/BasicLayout';
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
 				height: '100%',
 			}}>
 			<BasicLayout>
-				<ProjectsOverview />
+				<InnerInfo />
 			</BasicLayout>
 		</div>
 	);

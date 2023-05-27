@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Icon } from 'semantic-ui-react';
-import logo from '../../assets/MCrender.png';
+import Header from '../../Header/Header';
 import styles from './BasicLayout.module.scss';
 
 const BasicLayout = ({ children }) => {
@@ -51,47 +50,10 @@ const BasicLayout = ({ children }) => {
 					</svg>
 				</div>
 
-				<div className={styles.innerContainer}>
-					<header>
-						{/* Logo */}
-						<div className={styles.logo}>
-							<img src={logo} alt='Majo Cervantes' />
-						</div>
-
-						{/* Menu */}
-						<div className={styles.menu}>
-							<a
-								href='https://gmail.com'
-								className={styles.email}
-								target='_blank'
-								rel='noreferrer'>
-								<Icon name='mail' size='large' />
-							</a>
-
-							<a
-								href='https://github.com/MajoCervantes'
-								target='_blank'
-								rel='noreferrer'>
-								<Icon name='github' size='large' />
-							</a>
-
-							<a
-								href='https://www.npmjs.com/~majocervantes'
-								target='_blank'
-								rel='noreferrer'>
-								<Icon name='npm' size='large' />
-							</a>
-
-							<a
-								href='https://www.linkedin.com/in/majo-cervantes-4b0739224/'
-								target='_blank'
-								rel='noreferrer'>
-								<Icon name='linkedin' size='large' />
-							</a>
-						</div>
-					</header>
-				</div>
-
+				<Header />
+				<footer style={{ position: 'absolute', bottom: '10px', right: '0' }}>
+					© 2023 Majo Cervantes
+				</footer>
 				{/* Bottom Corner */}
 				<div className={styles.bottomRight}>
 					<svg
