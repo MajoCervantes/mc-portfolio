@@ -31,15 +31,19 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 300px;
+		height: 300px;
 	}
 
 	.bottomRight {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		width: 300px;
+		height: 300px;
 	}
 
-	.svgContainer {
+	.svgImage {
 		width: 100%;
 		height: 100%;
 	}
@@ -50,4 +54,25 @@ footer {
 	position: relative;
 	font-size: 14px;
 	padding: 35px 40px 30px;
+}
+
+@media screen and (max-width: 768px) {
+	.mainContainer {
+		align-items: flex-start;
+	}
+
+	.maininnerContainer {
+		padding: 20px;
+	}
+
+	.projectsOverview {
+		max-height: none;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.topLeft,
+	.bottomRight {
+		display: none;
+	}
 }

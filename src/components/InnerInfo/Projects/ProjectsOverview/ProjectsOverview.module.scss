@@ -111,3 +111,65 @@
 		}
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.mainProjects {
+		width: 100vw !important;
+		height: auto;
+		padding: 0 15px;
+		margin-top: 25px;
+
+		> h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+			white-space: nowrap;
+			overflow: visible;
+			text-overflow: ellipsis;
+		}
+
+		> .projectWrapper {
+			overflow-y: scroll;
+			width: 100%;
+
+			> div {
+				padding: 15px 15px 0;
+
+				> div {
+					margin-bottom: 10px;
+
+					> span {
+						font-size: 14px;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+
+						&::before,
+						&::after {
+							display: block;
+							content: '';
+							width: 100%;
+							height: 1px;
+							background: linear-gradient(135deg, #fca2c0 0%, #5ddfea 100%);
+							transition: all 0.3s ease-in-out;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+						}
+						&::before {
+							opacity: 1;
+						}
+						&::after {
+							opacity: 0;
+						}
+						&:hover::before {
+							opacity: 0;
+						}
+						&:hover::after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

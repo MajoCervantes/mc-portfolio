@@ -8,3 +8,19 @@
 	max-width: 130px;
 	width: 90px;
 }
+
+@media screen and (max-width: 768px) {
+	.mainMessage {
+		position: relative;
+		width: 100%;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 15px;
+	}
+	
+	.spacer {
+		display: none;
+	}
+}
