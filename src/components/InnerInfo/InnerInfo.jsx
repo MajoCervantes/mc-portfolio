@@ -7,6 +7,7 @@ import styles from './InnerInfo.module.scss';
 const InnerInfo = () => {
 	const [selectedProject, setSelectedProject] = useState(null);
 	const [showAnimation, setShowAnimation] = useState(false);
+	const [slidePersonal, setSlidePersonal] = useState(false);
 
 	const handleProjectClick = (project) => {
 		if (!selectedProject) {
@@ -15,6 +16,7 @@ const InnerInfo = () => {
 			setShowAnimation((prevState) => !prevState);
 		}
 		setSelectedProject((prevState) => (prevState === project ? null : project));
+		setSlidePersonal(true);
 	};
 
 	return (
@@ -27,7 +29,7 @@ const InnerInfo = () => {
 						setShowAnimation={setShowAnimation}
 					/>
 				) : (
-					<PersonalInfo selectedProject={selectedProject} />
+					<PersonalInfo slidePersonal={slidePersonal} />
 				)}
 			</div>
 

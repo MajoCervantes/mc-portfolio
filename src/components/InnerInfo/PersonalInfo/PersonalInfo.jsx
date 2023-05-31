@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import styles from './PersonalInfo.module.scss';
 
-const PersonalInfo = ({ selectedProject }) => {
+const PersonalInfo = ({ slidePersonal }) => {
 	return (
 		<div
 			className={classNames(styles.welcomeMessage, {
-				[styles.slideIn]: !selectedProject,
+				[styles.slideIn]: slidePersonal,
 			})}>
 			<h1>Bienvenido</h1>
 			<span>
