@@ -15,19 +15,28 @@ const ProjectInfo = ({ selectedProject, showAnimation }) => {
 				<div className={styles.buttonsContainer}>
 					{selectedProject?.web && (
 						<button>
-							<a href={selectedProject?.web}>Ver Sitio</a>
+							<a href={selectedProject?.web} target='_blank' rel='noreferrer'>
+								Ver Sitio
+							</a>
 						</button>
 					)}
 
 					{selectedProject?.github && (
 						<button>
-							<a href={selectedProject?.github}>Github</a>
+							<a
+								href={selectedProject?.github}
+								target='_blank'
+								rel='noreferrer'>
+								Github
+							</a>
 						</button>
 					)}
 
 					{selectedProject?.npm && (
 						<button>
-							<a href={selectedProject?.npm}>NPM</a>
+							<a href={selectedProject?.npm} target='_blank' rel='noreferrer'>
+								NPM
+							</a>
 						</button>
 					)}
 				</div>
